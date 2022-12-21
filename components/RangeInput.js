@@ -47,9 +47,9 @@ const RangeInput = ({
     <div className="mb-4">
       <div className="flex">
         <label className="block text-sm font-medium text-gray-700">
-          {isAgeRange ? 'Начну откладывать в' : 'Хватит'}
+          {isAgeRange ? 'Начну откладывать в ' : 'Хватит '}
         </label>
-        <div className="ml-1.5 block bg-white px-1.5 text-sm font-medium text-gray-700">
+        <div className="ml-0 block px-1.5 text-sm text-gray-700">
           {inputReadableValue} {isAgeRange ? '' : '₸/мес'}
         </div>
       </div>
