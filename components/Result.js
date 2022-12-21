@@ -14,8 +14,8 @@ const Result = ({ age, income, result }) => {
     <div className="mb-8 rounded-xl bg-gray-100 p-4">
       {result ? (
         <div>
-          Чтобы уйти на пенсию в {age} лет и тратить {readableIncome} ₸/мес,
-          откладывайте
+          Чтобы уйти на пенсию в {age} лет и тратить {readableIncome} ₸/мес
+          до конца жизни, откладывайте
         </div>
       ) : (
         <div>

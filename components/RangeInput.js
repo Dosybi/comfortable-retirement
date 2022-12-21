@@ -56,7 +56,7 @@ const RangeInput = ({
       <input
         type="range"
         className="h-1 w-full appearance-none bg-green-500"
-        min={isAgeRange ? '1' : '10000'}
+        min={isAgeRange ? '1' : '50000'}
         max={
           isAgeRange
             ? String(retirementAge).length === 2
@@ -64,7 +64,7 @@ const RangeInput = ({
               : '60'
             : '10000000'
         }
-        step={isAgeRange ? '1' : '10000'}
+        step={isAgeRange ? '1' : '50000'}
         defaultValue={isAgeRange ? startAge : monthlyIncome}
         onChange={(e) => setInputValue(e.target.value)}
       />

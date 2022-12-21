@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react'
 
 import Description from '../components/Description'
 import Inputs from '../components/Inputs'
+import MethodInfo from '../components/MethodInfo'
 import Result from '../components/Result'
 
 export default function Home() {
@@ -15,9 +16,10 @@ export default function Home() {
   useEffect(() => {
     setRetirementAge(60)
     setTotalAge(80)
+    setMonthlyIncome(1000000)
     setResult(
       Math.round(
-        (monthlyIncome * (totalAge - retirementAge)) /
+        (monthlyIncome * (totalAge - retirementAge) * 0.06) /
           ((retirementAge - startAge) * 12)
       )
     )
@@ -28,7 +30,7 @@ export default function Home() {
       setRetirementAge(age)
       setResult(
         Math.round(
-          (monthlyIncome * (totalAge - retirementAge)) /
+          (monthlyIncome * (totalAge - retirementAge) * 1.08) /
             ((retirementAge - startAge) * 12)
         )
       )
@@ -39,7 +41,7 @@ export default function Home() {
       setTotalAge(age)
       setResult(
         Math.round(
-          (monthlyIncome * (totalAge - retirementAge)) /
+          (monthlyIncome * (totalAge - retirementAge) * 1.08) /
             ((retirementAge - startAge) * 12)
         )
       )
@@ -49,7 +51,7 @@ export default function Home() {
     setMonthlyIncome(income)
     setResult(
       Math.round(
-        (monthlyIncome * (totalAge - retirementAge)) /
+        (monthlyIncome * (totalAge - retirementAge) * 1.08) /
           ((retirementAge - startAge) * 12)
       )
     )
@@ -59,7 +61,7 @@ export default function Home() {
       setStartAge(age)
       setResult(
         Math.round(
-          (monthlyIncome * (totalAge - retirementAge)) /
+          (monthlyIncome * (totalAge - retirementAge) * 1.08) /
             ((retirementAge - startAge) * 12)
         )
       )
@@ -90,6 +92,7 @@ export default function Home() {
           handleStartAgeChange={handleStartAgeChange}
         />
         <Result age={retirementAge} income={monthlyIncome} result={result} />
+        <MethodInfo />
       </main>
     </>
   )
