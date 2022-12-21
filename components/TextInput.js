@@ -16,10 +16,7 @@ const TextInput = ({
 
   return (
     <div className="mb-4">
-      <label
-        htmlFor="first-name"
-        className="block text-sm font-medium text-gray-700"
-      >
+      <label className="block text-sm font-medium text-gray-700">
         {isRetirementAge ? 'Выйду на пенсию' : 'Хочу прожить'}
       </label>
       <input

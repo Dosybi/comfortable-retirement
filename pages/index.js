@@ -19,7 +19,7 @@ export default function Home() {
     setMonthlyIncome(1000000)
     setResult(
       Math.round(
-        (monthlyIncome * (totalAge - retirementAge) * 0.06) /
+        (monthlyIncome * ((totalAge - retirementAge) * 12)) /
           ((retirementAge - startAge) * 12)
       )
     )
@@ -30,7 +30,7 @@ export default function Home() {
       setRetirementAge(age)
       setResult(
         Math.round(
-          (monthlyIncome * (totalAge - retirementAge) * 1.08) /
+          (monthlyIncome * ((totalAge - retirementAge) * 12)) /
             ((retirementAge - startAge) * 12)
         )
       )
@@ -41,7 +41,7 @@ export default function Home() {
       setTotalAge(age)
       setResult(
         Math.round(
-          (monthlyIncome * (totalAge - retirementAge) * 1.08) /
+          (monthlyIncome * ((totalAge - retirementAge) * 12)) /
             ((retirementAge - startAge) * 12)
         )
       )
@@ -51,7 +51,7 @@ export default function Home() {
     setMonthlyIncome(income)
     setResult(
       Math.round(
-        (monthlyIncome * (totalAge - retirementAge) * 1.08) /
+        (monthlyIncome * ((totalAge - retirementAge) * 12)) /
           ((retirementAge - startAge) * 12)
       )
     )
@@ -61,7 +61,7 @@ export default function Home() {
       setStartAge(age)
       setResult(
         Math.round(
-          (monthlyIncome * (totalAge - retirementAge) * 1.08) /
+          (monthlyIncome * ((totalAge - retirementAge) * 12)) /
             ((retirementAge - startAge) * 12)
         )
       )
